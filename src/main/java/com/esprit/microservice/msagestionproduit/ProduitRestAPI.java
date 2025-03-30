@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
             return title;
         }
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "creat", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Produit> createProduit(@RequestBody Produit produit) {
         return new ResponseEntity<>(produitService.addProduit(produit), HttpStatus.OK);

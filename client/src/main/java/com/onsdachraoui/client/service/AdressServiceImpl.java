@@ -11,7 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 public class AdressServiceImpl implements IAdressService {
 
-    private final AdressRepo adressRepo;
+     AdressRepo adressRepo;
 
     @Override
     public Adress addAdress(Adress adress) {

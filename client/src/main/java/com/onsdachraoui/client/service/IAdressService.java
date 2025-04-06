@@ -9,4 +9,5 @@ public interface IAdressService {
     Adress getAdressById(Long id);
     List<Adress> getAllAdresses();
     Adress updateAdress(Adress adress);
+
 }

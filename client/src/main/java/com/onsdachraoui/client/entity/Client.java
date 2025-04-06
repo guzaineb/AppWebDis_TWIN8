@@ -2,6 +2,9 @@ package com.onsdachraoui.client.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
+
 @ToString
 @Entity
 @Table(name = "clients")
@@ -24,4 +27,10 @@ public class Client {
 
     @Column(nullable = false)
     private String phone;
+    @ManyToOne
+    @JoinColumn(name = "adress_id")  // colonne FK dans la table clients
+    private Adress adress;
+
+
+
 }

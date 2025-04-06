@@ -44,8 +44,8 @@ public class ProduitService implements ImpProduitService {
     }
 
     @Override
-    public Produit getProduitByNom(String nom) {
-        return produitRepository.findByNom(nom).orElse(null);
+    public  List<Produit> getProduitByNom(String nom) {
+        return produitRepository.findAllByNom(nom);
     }
 
     @Override

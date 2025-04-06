@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -20,6 +22,8 @@ public class Produit {
     private String description;
     private double quantiteDisponible;  // Correction de la convention
     private double prix;
+    @ElementCollection // permet de stocker une liste simple dans une table liée
+    private List<String> imageUrls;
     @ManyToOne
     @JoinColumn(name = "category_id")
     @JsonIgnoreProperties("produits")

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 @Repository
 public interface ProduitRepository extends JpaRepository<Produit, Integer> {
-    Optional<Produit> findByNom(String nom);
+    List<Produit> findAllByNom(String nom);
     List<Produit> findByPrixBetween(double min, double max);
     List<Produit> findByQuantiteDisponibleGreaterThan(double quantity);
 }

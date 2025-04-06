@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SonarLintProjectSettings">
+    <option name="moduleMapping">
+      <map>
+        <entry key="microservice-paiement" value="AppWebDis_TWIN8-client" />
+        <entry key="paiement" value="client" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,3 +1,10 @@
+H2 port: 8081
+
+Gatewayport: 8093
+
+Eureka port: 8761
+
 keycloack port : 8181
-commande pour commancer keycloack: kc.bat start-dev --http-port=8181
-emplacement: telechargement (keycloack-23.0.0)
+
+Commande pour commancer keycloack: kc.bat start-dev --http-port=8181
+Emplacement: 4TWIN (keycloack-23.0.0)

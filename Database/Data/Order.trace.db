@@ -18,3 +18,59 @@ drop table if exists order cascade  [42001-232]
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "create table [*]order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id))"; attendu "identifier"
 Syntax error in SQL statement "create table [*]order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id))"; expected "identifier"; SQL statement:
 create table order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id)) [42001-232]
+2025-04-07 00:49:02.271274+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "drop table if exists [*]order cascade "; attendu "identifier"
+Syntax error in SQL statement "drop table if exists [*]order cascade "; expected "identifier"; SQL statement:
+drop table if exists order cascade  [42001-232]
+2025-04-07 00:49:02.286745+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "create table [*]order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id))"; attendu "identifier"
+Syntax error in SQL statement "create table [*]order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id)) [42001-232]
+2025-04-07 00:49:07.957837+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "insert into [*]order (order_date,reference,id) values (?,?,?)"; attendu "identifier"
+Syntax error in SQL statement "insert into [*]order (order_date,reference,id) values (?,?,?)"; expected "identifier"; SQL statement:
+insert into order (order_date,reference,id) values (?,?,?) [42001-232]
+2025-04-07 00:51:29.539883+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "drop table if exists [*]order cascade "; attendu "identifier"
+Syntax error in SQL statement "drop table if exists [*]order cascade "; expected "identifier"; SQL statement:
+drop table if exists order cascade  [42001-232]
+2025-04-07 00:51:29.554081+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "create table [*]order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id))"; attendu "identifier"
+Syntax error in SQL statement "create table [*]order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id)) [42001-232]
+2025-04-07 00:51:34.746204+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "insert into [*]order (order_date,reference,id) values (?,?,?)"; attendu "identifier"
+Syntax error in SQL statement "insert into [*]order (order_date,reference,id) values (?,?,?)"; expected "identifier"; SQL statement:
+insert into order (order_date,reference,id) values (?,?,?) [42001-232]
+2025-04-07 00:53:40.032354+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "drop table if exists [*]order cascade "; attendu "identifier"
+Syntax error in SQL statement "drop table if exists [*]order cascade "; expected "identifier"; SQL statement:
+drop table if exists order cascade  [42001-232]
+2025-04-07 00:53:40.045457+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "create table [*]order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id))"; attendu "identifier"
+Syntax error in SQL statement "create table [*]order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id))"; expected "identifier"; SQL statement:
+create table order (id bigint not null, order_date timestamp(6), reference varchar(255), primary key (id)) [42001-232]
+2025-04-07 00:53:45.104618+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "insert into [*]order (order_date,reference,id) values (?,?,?)"; attendu "identifier"
+Syntax error in SQL statement "insert into [*]order (order_date,reference,id) values (?,?,?)"; expected "identifier"; SQL statement:
+insert into order (order_date,reference,id) values (?,?,?) [42001-232]
+2025-04-07 01:00:13.329241+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "SELECT * FROM [*]order"; attendu "identifier"
+Syntax error in SQL statement "SELECT * FROM [*]order"; expected "identifier"; SQL statement:
+SELECT * FROM order [42001-232]
+2025-04-07 01:00:40.009850+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "SELECT * FROM [*]order"; attendu "identifier"
+Syntax error in SQL statement "SELECT * FROM [*]order"; expected "identifier"; SQL statement:
+SELECT * FROM order [42001-232]
+2025-04-07 01:00:40.949905+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "SELECT * FROM [*]order"; attendu "identifier"
+Syntax error in SQL statement "SELECT * FROM [*]order"; expected "identifier"; SQL statement:
+SELECT * FROM order [42001-232]
+2025-04-07 01:00:41.606417+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "SELECT * FROM [*]order"; attendu "identifier"
+Syntax error in SQL statement "SELECT * FROM [*]order"; expected "identifier"; SQL statement:
+SELECT * FROM order [42001-232]
+2025-04-07 01:00:54.079870+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Erreur de syntaxe dans l'instruction SQL "SELECT * FROM [*]order"; attendu "identifier"
+Syntax error in SQL statement "SELECT * FROM [*]order"; expected "identifier"; SQL statement:
+SELECT * FROM order [42001-232]

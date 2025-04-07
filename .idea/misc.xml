@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/Order/pom.xml" />
         <option value="$PROJECT_DIR$/Descovery/pom.xml" />
         <option value="$PROJECT_DIR$/Eureka_Order/pom.xml" />
+        <option value="$PROJECT_DIR$/Gateway/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

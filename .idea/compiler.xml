@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Order" />
         <module name="Eureka_Order" />
+        <module name="Gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Descovery" options="-parameters" />
       <module name="Eureka_Order" options="-parameters" />
+      <module name="Gateway" options="-parameters" />
       <module name="Order" options="-parameters" />
     </option>
   </component>

@@ -57,4 +57,12 @@ public class ProduitService implements ImpProduitService {
     public List<Produit> getProduitsEnStock() {
         return produitRepository.findByQuantiteDisponibleGreaterThan(0);
     }
+
+
+    @Override
+    public Produit getProduitById(int id) {
+        return produitRepository.findById(id).get();
+    }
+
+
 }

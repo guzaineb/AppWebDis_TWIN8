@@ -91,7 +91,9 @@ public class ProduitRestAPI {
 
 
 
-    @PutMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+
+    @PutMapping(value = "update/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+
     @ResponseStatus(HttpStatus.OK)
     public ResponseEntity<Produit> updateProduit(@PathVariable(value = "id") int id,
                                                  @RequestBody Produit produit) {
@@ -133,4 +135,12 @@ public class ProduitRestAPI {
     public ResponseEntity<List<Produit>> getProduitsEnStock() {
         return new ResponseEntity<>(produitService.getProduitsEnStock(), HttpStatus.OK);
     }
+
+    @GetMapping("/{id}")
+    public Produit getProduitById( @PathVariable (value = "id")  int id) {
+return produitService.getProduitById(id);
+    }
+
+
+
 }

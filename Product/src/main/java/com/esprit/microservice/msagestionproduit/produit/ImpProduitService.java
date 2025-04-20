@@ -10,4 +10,7 @@ public interface ImpProduitService {
     List<Produit> getProduitByNom(String nom); // Recherche par nom
     List<Produit> getProduitsByPrixRange(double min, double max); // Recherche avancée par intervalle de prix
     List<Produit> getProduitsEnStock(); // Recherche avancée : produits en stock uniquement
+
+Produit getProduitById(int id);
+
 }

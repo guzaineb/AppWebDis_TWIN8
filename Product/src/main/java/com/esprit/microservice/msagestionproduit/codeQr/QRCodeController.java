@@ -21,4 +21,11 @@ public class QRCodeController {
         byte[] qrImage = qrCodeService.generateQRCodeByteArray(text, 250, 250);
         return ResponseEntity.ok().contentType(MediaType.IMAGE_PNG).body(qrImage);
     }
+
+
+    @GetMapping(value = "/category/{id}", produces = MediaType.IMAGE_PNG_VALUE)
+    public ResponseEntity<byte[]> getQRCodeForCategory(@PathVariable Long id) throws Exception {
+        byte[] qrCode = qrCodeService.generateQRCodeForCategory(id, 250, 250);
+        return ResponseEntity.ok().body(qrCode);
+    }
 }

@@ -24,6 +24,8 @@ public class Category {
     private Long id;
 
     private String name;
+    @Column(unique = true)
+    private String codeApi;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Produit> produits;

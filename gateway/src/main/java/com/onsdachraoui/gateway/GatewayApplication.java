@@ -16,8 +16,6 @@ public class GatewayApplication {
 	public RouteLocator gatewayRoutes(RouteLocatorBuilder builder){
 
 		return builder.routes()
-				.route("Client", r->r.path("/clients/**")
-						.uri("http://localhost:8091"))
 
 				.route("Produit", r->r.path("/Produit/**")
 						.uri("http://localhost:8081"))

@@ -8,13 +8,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
-        <module name="client" />
         <module name="gateway" />
         <module name="discovery" />
         <module name="MSA-GestionProduit" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="client" target="17" />
       <module name="profil" target="17" />
       <module name="student" target="17" />
     </bytecodeTargetLevel>

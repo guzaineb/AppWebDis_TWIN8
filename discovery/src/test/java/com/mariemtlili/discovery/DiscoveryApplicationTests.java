@@ -1,10 +1,10 @@
-package com.onsdachraoui.gateway;
+package com.mariemtlili.discovery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GatewayApplicationTests {
+class DiscoveryApplicationTests {
 
 	@Test
 	void contextLoads() {

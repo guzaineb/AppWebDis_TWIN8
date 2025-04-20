@@ -1,0 +1,10 @@
+services:
+  postgres:
+    container_name: ms_pg_sql
+    image: postgres
+    environment:
+      POSTGRES_USER: zaineb
+      POSTGRES_PASSWORD: zaineb
+      PGDATA: /var/lib/postgresql/data
+
+

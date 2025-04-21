@@ -1,0 +1,93 @@
+<!-- Section de recherche -->
+<div class="container mb-4">
+  <div class="row g-3">
+    <!-- Recherche par nom -->
+    <div class="col-md-4">
+      <div class="input-group">
+        <input type="text" 
+               class="form-control" 
+               placeholder="Rechercher par nom"
+               [(ngModel)]="searchTerm"
+               (keyup.enter)="searchByName()">
+        <button class="btn btn-outline-primary" 
+                (click)="searchByName()">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Filtre par prix -->
+    <div class="col-md-4">
+      <div class="input-group">
+        <input type="number" 
+               class="form-control" 
+               placeholder="Prix min" 
+               [(ngModel)]="minPrice">
+        <input type="number" 
+               class="form-control" 
+               placeholder="Prix max" 
+               [(ngModel)]="maxPrice">
+        <button class="btn btn-outline-primary" 
+                (click)="searchByPrice()">
+          <i class="bi bi-funnel"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Filtre en stock -->
+    <div class="col-md-4">
+      <div class="form-check form-switch">
+        <input class="form-check-input" 
+               type="checkbox" 
+               id="stockSwitch" 
+               [(ngModel)]="inStockOnly"
+               (change)="toggleStockFilter()">
+        <label class="form-check-label" for="stockSwitch">
+          En stock seulement
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Indicateur de chargement -->
+<div *ngIf="isLoading" class="text-center py-5">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Chargement...</span>
+  </div>
+</div>
+
+<!-- Grille de produits -->
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="!isLoading">
+    <div class="col" *ngFor="let produit of filteredProduits">
+      <div class="card h-100 shadow-sm border-0">
+        <img [src]="produit.images|| 'assets/default-product.png'" 
+             class="card-img-top product-image" 
+             [alt]="produit.nom"
+             (error)="handleImageError($event)">
+        <div class="card-body">
+          <h5 class="card-title">
+            <i class="bi bi-tag-fill text-success me-1"></i> {{ produit.nom }}
+          </h5>
+          <p class="card-text text-muted">
+            <i class="bi bi-text-left me-1"></i> {{ produit.description }}
+          </p>
+        </div>
+        <div class="card-footer bg-transparent">
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="h5 text-primary">
+              <i class="bi bi-currency-euro"></i> {{ produit.prix | number:'1.2-2' }}
+            </span>
+            <div>
+              <button class="btn btn-success btn-sm"
+                      (click)="addToCart(produit)">
+                <i class="bi bi-cart-plus-fill me-1"></i> Ajouter
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

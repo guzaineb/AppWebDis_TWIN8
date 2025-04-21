@@ -1,0 +1,62 @@
+<div class="container mt-5">
+  <h2>{{ isEditMode ? 'Modifier Produit' : 'Ajouter Produit' }}</h2>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #produitForm="ngForm">
+    <!-- Nom -->
+    <div class="mb-3">
+      <label for="nom" class="form-label">Nom*</label>
+      <input type="text" class="form-control" id="nom" 
+             [(ngModel)]="produit.nom" name="nom" required>
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+      <label for="description" class="form-label">Description*</label>
+      <textarea class="form-control" id="description" 
+                [(ngModel)]="produit.description" name="description" required></textarea>
+    </div>
+
+    <!-- Prix -->
+    <div class="mb-3">
+      <label for="prix" class="form-label">Prix*</label>
+      <input type="number" step="0.01" class="form-control" id="prix" 
+             [(ngModel)]="produit.prix" name="prix" min="0" required>
+    </div>
+
+    <!-- Quantité -->
+    <div class="mb-3">
+      <label for="quantiteDisponible" class="form-label">Quantité*</label>
+      <input type="number" class="form-control" id="quantiteDisponible" 
+             [(ngModel)]="produit.quantiteDisponible" name="quantiteDisponible" min="0" required>
+    </div>
+
+    <!-- Catégorie -->
+    <div class="mb-3">
+      <label for="category" class="form-label">Catégorie*</label>
+      <select class="form-select" id="category" 
+              [(ngModel)]="produit.category" name="category" required>
+        <option [ngValue]="null" disabled>Sélectionnez une catégorie</option>
+        <option *ngFor="let cat of categories" [ngValue]="cat">
+          {{ cat.name }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Images -->
+    <div class="mb-3">
+      <label for="images" class="form-label">Images</label>
+      <input type="file" class="form-control" id="images" 
+             multiple (change)="onFileChange($event)" accept="image/*">
+    </div>
+
+    <!-- Bouton Submit -->
+    <button type="submit" class="btn btn-primary" [disabled]="!produitForm.valid || isLoading">
+      <span *ngIf="!isLoading">{{ isEditMode ? 'Mettre à jour' : 'Créer' }}</span>
+      <span *ngIf="isLoading" class="spinner-border spinner-border-sm"></span>
+    </button>
+  </form>
+</div>

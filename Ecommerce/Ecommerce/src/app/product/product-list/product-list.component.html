@@ -1,0 +1,49 @@
+<div class="container mt-4">
+    <h2 class="mb-4">
+      <i class="bi bi-box-seam-fill text-primary me-2"></i> Produits de la catégorie
+    </h2>
+  
+    <div *ngIf="isLoading" class="text-center">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Chargement...</span>
+      </div>
+    </div>
+  
+    <div *ngIf="!isLoading">
+      <div *ngIf="produits.length === 0" class="alert alert-info d-flex align-items-center">
+        <i class="bi bi-info-circle-fill me-2"></i> Aucun produit trouvé dans cette catégorie
+      </div>
+  
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col" *ngFor="let produit of produits">
+          <div class="card h-100 shadow-sm border-0">
+            <img [src]="produit.images" class="card-img-top product-image" [alt]="produit.nom" onError="this.src='assets/default-product.png'">
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="bi bi-tag-fill text-success me-1"></i> {{ produit.nom }}
+              </h5>
+              <p class="card-text text-muted">
+                <i class="bi bi-text-left me-1"></i> {{ produit.description }}
+              </p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="h5 text-primary">
+                  <i class="bi bi-currency-euro"></i> {{ produit.prix | number:'1.2-2' }}
+                </span>
+                <div>
+                              <button 
+                    class="btn btn-success btn-sm"
+                    (click)="addToCart(produit)"
+                  >
+                    <i class="bi bi-cart-plus-fill me-1"></i> Ajouter
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

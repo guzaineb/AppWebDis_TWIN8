@@ -4,6 +4,7 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Order/pom.xml" />
         <option value="$PROJECT_DIR$/Descovery/pom.xml" />
         <option value="$PROJECT_DIR$/Eureka_Order/pom.xml" />
@@ -15,6 +16,13 @@
         <option value="$PROJECT_DIR$/Descovery/pom.xml" />
       </set>
     </option>
+=======
+        <option value="$PROJECT_DIR$/App web Distribué/Order/pom.xml" />
+        <option value="$PROJECT_DIR$/App web Distribué/Gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/App web Distribué/Eureka_Order/pom.xml" />
+      </list>
+    </option>
+>>>>>>> aa33837 (Added Order Lifecycle Management)
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_20" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

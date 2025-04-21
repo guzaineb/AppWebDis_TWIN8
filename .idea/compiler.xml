@@ -2,7 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+<<<<<<< HEAD
       <profile default="true" name="Default" enabled="true" />
+=======
+>>>>>>> aa33837 (Added Order Lifecycle Management)
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -12,6 +15,7 @@
         <module name="Gateway" />
       </profile>
     </annotationProcessing>
+<<<<<<< HEAD
     <bytecodeTargetLevel>
       <module name="Descovery" target="17" />
     </bytecodeTargetLevel>
@@ -19,6 +23,11 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Descovery" options="-parameters" />
+=======
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+>>>>>>> aa33837 (Added Order Lifecycle Management)
       <module name="Eureka_Order" options="-parameters" />
       <module name="Gateway" options="-parameters" />
       <module name="Order" options="-parameters" />

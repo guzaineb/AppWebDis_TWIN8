@@ -2,6 +2,11 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/Order" vcs="Git" />
+=======
+    <mapping directory="$PROJECT_DIR$/App web Distribué" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/App web Distribué/Order" vcs="Git" />
+>>>>>>> aa33837 (Added Order Lifecycle Management)
   </component>
 </project>
